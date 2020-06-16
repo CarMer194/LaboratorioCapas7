@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymealeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista de estudiantes here</title>
+</head>
+<body>
+
+	<form th:action="@{mostrarEstudiante}" method="post">
+		<label>Buscar por codigo de estudiante: </label> <input type="number" name="codigo"><br>
+		<input type="submit" value="Buscar">
+	</form>
+
+</body>
+</html>

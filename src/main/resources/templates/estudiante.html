@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymealeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Mostrar Estudiante por llave primaria</title>
+</head>
+<body>
+	<label>Computadoras del estudiante: </label><label th:text="${estudiante.nombre}"></label> 	
+	<table>
+		<thead>
+		<tr>
+			<th>id Computadora</th>
+			<th>Marca</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="comp: ${estudiante.computadoras}">
+			<td th:text="${comp.codigoComputadora}"></td>
+			<td th:text="${comp.marca}"></td>
+		</tr>
+		</tbody>
+	</table>
+	<br>
+	<form th:action="@{/estudiante}"><input type="submit" value="regresar"></form>
+</body>
+</html>
